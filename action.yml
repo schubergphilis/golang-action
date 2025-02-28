@@ -245,6 +245,6 @@ runs:
       if: inputs.release-download-repo != ''
       shell: bash
       run: |
-        task github-release-download --yes
+        task github-release-download
       env:
         GITHUB_TOKEN: ${{ inputs.token }}
