@@ -181,7 +181,7 @@ tasks:
     desc: download assets from a GitHub release.
     cmds:
       - |
-        gihub release download \
+        gh release download \
           --repo {{.RELEASE_DOWNLOAD_REPO}} \
           --pattern {{.RELEASE_DOWNLOAD_PATTERN}} \
           --archive {{.RELEASE_DOWNLOAD_ARCHIVE}}
