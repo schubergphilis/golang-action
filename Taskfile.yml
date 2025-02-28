@@ -183,7 +183,6 @@ tasks:
       - |
         gh release download \
           --repo {{.RELEASE_DOWNLOAD_REPO}} \
-          --pattern {{.RELEASE_DOWNLOAD_PATTERN}} \
           --archive {{.RELEASE_DOWNLOAD_ARCHIVE}}
     silent: true
   golang-log:
