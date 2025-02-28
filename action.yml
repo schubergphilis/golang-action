@@ -242,7 +242,7 @@ runs:
     # Download release assets from another repository.
     #
     - name: download release assets
-      if: inputs.release-download-repo != ''
+      if: inputs.release-download-archive != ''
       shell: bash
       run: |
         task github-release-download
