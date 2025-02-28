@@ -248,3 +248,6 @@ runs:
         task github-release-download
       env:
         GITHUB_TOKEN: ${{ inputs.token }}
+        RELEASE_DOWNLOAD_REPO: ${{ inputs.release-download-repo }}
+        RELEASE_DOWNLOAD_PATTERN: ${{ inputs.release-download-pattern }}
+        RELEASE_DOWNLOAD_ARCHIVE: ${{ inputs.release-download-archive }}
