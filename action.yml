@@ -246,3 +246,5 @@ runs:
       shell: bash
       run: |
         task github-release-download --yes
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
