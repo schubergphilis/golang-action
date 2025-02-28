@@ -21,7 +21,7 @@ vars:
   OS_TYPE_MAC: Darwin
   # Variables that are sorted alphabetically and are used in the tasks.
   BUILD_TAGS: '{{ .BUILD_TAGS | default "component,e2e,integration" }}'
-  CODE_COVERAGE_TIMEOUT: '{{.CODE_COVERAGE_TIMEOUT | default "4m0s"}}'
+  CODE_COVERAGE_TIMEOUT: '{{.CODE_COVERAGE_TIMEOUT }}'
   COVERPROFILE: profile.cov
   GCI: '{{.GOBIN}}/gci'
   GCI_SECTIONS: '{{.GCI_SECTIONS | default "-s standard -s default"}}'
@@ -55,15 +55,15 @@ vars:
     sh: '{{.OS_COMMAND}} -m'
   REGAL: '{{.GOBIN}}/regal'
   REGAL_VERSION: 0.29.2
-  RELEASE_DOWNLOAD_REPO: release-download-repo
-  RELEASE_DOWNLOAD_PATTERN: release-download-pattern
-  RELEASE_DOWNLOAD_ARCHIVE: release-download-archive
+  RELEASE_DOWNLOAD_REPO: ${{.RELEASE_DOWNLOAD_REPO}}
+  RELEASE_DOWNLOAD_PATTERN: ${{.RELEASE_DOWNLOAD_PATTERN}}
+  RELEASE_DOWNLOAD_ARCHIVE: ${{.RELEASE_DOWNLOAD_ARCHIVE}}
   SED_INSERT_ADDITION:
     sh: |
       if [ "{{.OS_COMMAND}}" = "{{.OS_TYPE_MAC}}" ]; then
         echo "\"\""
       fi
-  TEST_TIMEOUT: '{{.TEST_TIMEOUT | default "4m0s"}}'
+  TEST_TIMEOUT: '{{.TEST_TIMEOUT }}'
   YQ_MAJOR_VERSION: v4
   YQ_VERSION: '{{.YQ_MAJOR_VERSION}}.44.3'
 
