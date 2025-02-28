@@ -182,8 +182,8 @@ tasks:
     cmds:
       - |
         gh release download \
-          --repo {{.RELEASE_DOWNLOAD_REPO}} \
-          --archive zip
+          --repo {{RELEASE_DOWNLOAD_REPO}} \
+          --archive {{RELEASE_DOWNLOAD_ARCHIVE}} \
   golang-log:
     cmds:
       - |
