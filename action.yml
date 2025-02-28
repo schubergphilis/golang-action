@@ -54,6 +54,15 @@ inputs:
     default: "public.ecr.aws/aquasecurity/trivy-java-db:1"
     description: |
       OCI repository to retrieve trivy-java-db from.
+  release-download-repo:
+    description: |
+      Select another repository using the [HOST/]OWNER/REPO format
+  release-download-pattern:
+    description: |
+      Download only assets that match a glob pattern
+  release-download-archive:
+    description: |
+      Download the source code archive in the specified format (zip or tar.gz)
 runs:
   using: "composite"
   steps:
