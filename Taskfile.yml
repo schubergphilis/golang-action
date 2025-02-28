@@ -177,6 +177,14 @@ tasks:
       - '{{.GCI}} write --skip-generated {{.GCI_SECTIONS}} .'
     desc: fix incorrect import order with gci
     silent: true
+  github-release-download:
+    cmds:
+      - |
+        release download \
+          --repo {{.RELEASE_DOWNLOAD_REPO}} \
+          --pattern {{.RELEASE_DOWNLOAD_PATTERN}} \
+          --archive {{.RELEASE_DOWNLOAD_ARCHIVE}}
+    silent: true
   golang-log:
     cmds:
       - |
@@ -476,12 +484,4 @@ tasks:
           go install \
             github.com/mikefarah/yq/{{.YQ_MAJOR_VERSION}}@{{.YQ_VERSION}}
         fi
-    silent: true
-  github-release-download:
-    cmds:
-      - |
-        release download \
-          --repo {{.RELEASE_DOWNLOAD_REPO}} \
-          --pattern {{.RELEASE_DOWNLOAD_PATTERN}} \
-          --archive {{.RELEASE_DOWNLOAD_ARCHIVE}}
     silent: true
