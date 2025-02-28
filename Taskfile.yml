@@ -55,6 +55,9 @@ vars:
     sh: '{{.OS_COMMAND}} -m'
   REGAL: '{{.GOBIN}}/regal'
   REGAL_VERSION: 0.29.2
+  RELEASE_DOWNLOAD_REPO: release-download-repo
+  RELEASE_DOWNLOAD_PATTERN: release-download-pattern
+  RELEASE_DOWNLOAD_ARCHIVE: release-download-archive
   SED_INSERT_ADDITION:
     sh: |
       if [ "{{.OS_COMMAND}}" = "{{.OS_TYPE_MAC}}" ]; then
@@ -63,9 +66,6 @@ vars:
   TEST_TIMEOUT: '{{.TEST_TIMEOUT | default "4m0s"}}'
   YQ_MAJOR_VERSION: v4
   YQ_VERSION: '{{.YQ_MAJOR_VERSION}}.44.3'
-  RELEASE_DOWNLOAD_REPO: release-download-repo
-  RELEASE_DOWNLOAD_PATTERN: release-download-pattern
-  RELEASE_DOWNLOAD_ARCHIVE: release-download-archive
 
 tasks:
   build-golang-download-modules:
