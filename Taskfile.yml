@@ -178,9 +178,10 @@ tasks:
     desc: fix incorrect import order with gci
     silent: true
   github-release-download:
+    desc: download assets from a GitHub release.
     cmds:
       - |
-        release download \
+        gihub release download \
           --repo {{.RELEASE_DOWNLOAD_REPO}} \
           --pattern {{.RELEASE_DOWNLOAD_PATTERN}} \
           --archive {{.RELEASE_DOWNLOAD_ARCHIVE}}
