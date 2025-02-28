@@ -477,10 +477,11 @@ tasks:
             github.com/mikefarah/yq/{{.YQ_MAJOR_VERSION}}@{{.YQ_VERSION}}
         fi
     silent: true
-  github:
+  github-release-download:
     cmds:
       - |
         release download \
           --repo {{.RELEASE_DOWNLOAD_REPO}} \
           --pattern {{.RELEASE_DOWNLOAD_PATTERN}} \
           --archive {{.RELEASE_DOWNLOAD_ARCHIVE}}
+    silent: true
